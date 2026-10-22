@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            text-align: center;
+            margin : 10px 10px;
+            line-height: 200px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hii I'm Aayush Varvatkar</h1>
+
+    <button id="btn1">Button 1</button>
+
+    <div class="box">tihs is a box</div>
+
+    <button id="btn2">Button 2</button>
+
+
+    <script>
+
+    
+
+        let btn1 =document.querySelector("#btn1");
+        btn1.onclick = () => {
+            alert("Button 1 is clicked")
+        }
+
+        // event object - holds information about the event
+        let box = document.querySelector(".box");
+        box.onmouseover = (evt) => {           // evt is event object
+            console.log("cursor is over the box");
+            console.log(evt);
+            console.log(evt.type);
+            console.log(evt.target);
+            console.log(evt.clientX, evt.clientY);
+
+        }
+
+
+        // In above method only one event handler can be assigned to an event.    other event handler will overwrite the previous one.
+
+        //In order to assign multiple event handlers to an event, we can use addEventListener method.
+
+
+        let btn2 = document.querySelector("#btn2");
+
+        btn2.addEventListener("click", () => {
+            console.log("Button 2 is clicked - handler 1");
+        });
+
+        btn2.addEventListener("click", () => {
+           alert("button is clicked")
+        });
+
+       const handler2 = () => {
+        console.log("Button 2 is clicked - handler 2");
+       }
+        btn2.addEventListener("click", handler2);
+
+        // To remove an event handler, we can use removeEventListener method.
+        // btn2.removeEventListener("click", handler2); // This will remove the handler2 from the button 2 click event.
+
+        // We can also pass options to the addEventListener method.
+        // btn2.addEventListener("click", handler2, { once: true }); // This will remove the handler after it is called once.
+
+
+    </script>
+    
+</body>
+</html>
