@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" name="JSClass">this is div</div>
+    <p id="para">this is paragraph</p>
+
+
+    <script>
+
+        let div001 = document.querySelector("div");
+        console.log(div001);
+
+        let class01 = div001.getAttribute("class");          // returns the value of the id attribute
+        console.log(class01);
+        let class02 = div001.getAttribute("name");           // returns the value of the name attribute
+        console.log(class02);
+
+
+
+        let para01 = document.querySelector("p");
+        console.log(para01.getAttribute("id"));          // returns the value of the id attribute
+        
+
+        console.log(para01.setAttribute("id", "newclass"));          // sets the value of the para attribute to "newclass"
+
+
+    </script>
+</body>
+</html>
