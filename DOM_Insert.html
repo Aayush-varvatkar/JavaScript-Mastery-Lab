@@ -1,0 +1,67 @@
+
+let el = document.createElement("button");          // creates a new button element
+
+node.append(el);                                  // adds new-element at the end of the node (INSIDE)
+node.prepend(el);                                 // adds new-element at the start of the node (INSIDE)
+
+node.before(el);                                  // adds new-element before the node (OUTSIDE)
+node.after(el);                                   // adds new-element after the node (OUTSIDE)
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            height: 200px;
+            width: 300px;
+            background-color: rgb(243, 237, 208);
+            border: 2px solid black;
+            text-align: center;
+          
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1 id="heading">This is heading</h1>
+        <ul>
+            <li>List</li>
+            <li>Hii im Aayush</li>
+            <li>Hii im Aayush</li>
+            <li>Hii im Aayush</li>
+        </ul>
+    </div>
+    <p id="para">this is paragraph</p>
+
+
+    <script>
+
+        let newbtn = document.createElement("button");          // creates a new button element
+        newbtn.innerText = "Clink Here";
+        let div = document.querySelector("div");
+
+        // div.append(newbtn);                                  // adds new-element at the end of the node (INSIDE)
+        // div.prepend(newbtn);                                 // adds new-element at the start of the node (INSIDE)
+        // div.before(newbtn);                                  // adds new-element before the node (OUTSIDE)
+        div.after(newbtn);                                   // adds new-element after the node (OUTSIDE)
+
+
+
+
+
+        let newHeading = document.createElement("h1");
+        newHeading.innerHTML = "<i>HII! I'm Aayush from WEB-Outreach</i>";
+
+        document.querySelector("body").prepend(newHeading);
+
+    </script>
+    
+</body>
+</html>
