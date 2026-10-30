@@ -1,0 +1,63 @@
+
+<!--
+1. tagname - returns element nodes
+2. innertext - returns text content of the element and its children
+3. innerHTML - returns the text content and HTML tags of the element and its children
+4. textcontent - returns the text content of the element, even for hidden elements 
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <h1 style="visibility: hidden;">Hiii this is Aayush</h1>              <!-- this is hidden element, but textContent will still return the text -->
+
+
+      <div>
+        <img src="#">
+        <h1 id="heading">This is heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, ex.</p>
+    </div>
+
+    <div>
+        <!-- <p class="paragraph">Lorem ipsum dolor sit amet.</p> -->
+        <span>HII THIS IS TEST SUBJECT 005</span>
+    </div>
+
+
+    <script>
+
+        let tagname = document.querySelector("h1");
+        console.log(tagname);
+
+
+        let innertext = document.querySelector("div").innerText               // returns text content of the element and its children
+        console.log(innertext);
+
+        let innerhtml = document.querySelector("div").innerHTML               // returns the text content and HTML tags of the element and its children
+        console.log(innerhtml);
+
+
+
+        //  let changeinnertext = document.querySelector("div").innerText = "This is changed text";             // changes the text content of the element and its children
+        //  console.log(changeinnertext);
+
+
+
+        let textcontent = document.querySelector("h1").textContent;
+        console.log(textcontent);                                             // returns the text content of the element, even for hidden elements
+
+
+    </script>
+
+
+</body>
+</html>
