@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 100px; /* Center text vertically */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">This is box</div>
+
+
+    <script>
+
+        let divo1 = document.querySelector("div")
+        console.log(divo1);
+
+        divo1.style.backgroundColor = "blue";
+        divo1.style.color = "yellow";
+        divo1.style.border = "2px solid green";
+        divo1.style.width = "200px";
+        divo1.style.height = "200px";
+        divo1.style.lineHeight = "200px"; 
+
+        divo1.innerText = "HEY!!";
+
+    </script>
+    
+</body>
+</html>
